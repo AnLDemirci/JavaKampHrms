@@ -6,4 +6,6 @@ import com.hrms.hrms.entities.concretes.SystemPersonel;
 
 public interface SystemPersonelDao extends JpaRepository<SystemPersonel, Integer>{
 
+	
+	
 }

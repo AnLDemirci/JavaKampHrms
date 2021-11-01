@@ -6,4 +6,8 @@ import com.hrms.hrms.entities.concretes.Employee;
 
 public interface EmployeeDao extends JpaRepository<Employee, Integer>{
 
+	boolean existsEmployerByTcNo(String tcNo);
+
+	boolean existsEmployerByEmail(String email);
+	
 }

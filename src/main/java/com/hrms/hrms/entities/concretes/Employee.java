@@ -1,44 +1,41 @@
 package com.hrms.hrms.entities.concretes;
 
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 import com.hrms.hrms.entities.abstracts.Users;
+import com.sun.istack.NotNull;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name="Employee")
+@EqualsAndHashCode(callSuper = false)
+@PrimaryKeyJoinColumn(name="user_id")
+@Table(name="employee")
 public class Employee extends Users{
 
-	@Column(name="Name")
+	@NotNull
+	@Column(name="name")
 	private String name;
 	
-	@Column(name="Surname")
+	@NotNull
+	@Column(name="surname")
 	private String surname;
 	
-	@Column(name="TcNo")
+	@NotNull
+	@Column(name="national_identity")
 	private String tcNo;
 	
-	@Column(name="BirthOfYear")
-	private Date birthOfYear;
-
-	public Employee() {}
-
-	public Employee(String name, String surname, String tcNo, Date birthOfYear) {
-		super();
-		this.name = name;
-		this.surname = surname;
-		this.tcNo = tcNo;
-		this.birthOfYear = birthOfYear;
-	}
-	
-	
-	
+	@NotNull
+	@Column(name="year_of_birth")
+	private int birthOfYear;
 }
