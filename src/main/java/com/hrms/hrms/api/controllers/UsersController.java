@@ -10,16 +10,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hrms.hrms.busniess.abstracts.EmployeeService;
-import com.hrms.hrms.busniess.abstracts.EmployersService;
-import com.hrms.hrms.busniess.abstracts.SystemPersonelService;
-import com.hrms.hrms.busniess.abstracts.UsersService;
+import com.hrms.hrms.busniess.abstracts.userService.EmployeeService;
+import com.hrms.hrms.busniess.abstracts.userService.EmployersService;
+import com.hrms.hrms.busniess.abstracts.userService.SystemPersonelService;
+import com.hrms.hrms.busniess.abstracts.userService.UsersService;
 import com.hrms.hrms.core.utilities.results.DataResult;
 import com.hrms.hrms.core.utilities.results.Result;
 import com.hrms.hrms.entities.abstracts.Users;
-import com.hrms.hrms.entities.concretes.Employee;
-import com.hrms.hrms.entities.concretes.Employers;
-import com.hrms.hrms.entities.concretes.SystemPersonel;
+import com.hrms.hrms.entities.concretes.users.Employee;
+import com.hrms.hrms.entities.concretes.users.Employers;
+import com.hrms.hrms.entities.concretes.users.SystemPersonel;
 
 @RestController
 @RequestMapping("/api/users")

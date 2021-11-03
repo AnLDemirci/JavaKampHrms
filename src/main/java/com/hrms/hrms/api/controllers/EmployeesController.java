@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hrms.hrms.busniess.abstracts.EmployeeService;
+import com.hrms.hrms.busniess.abstracts.userService.EmployeeService;
 import com.hrms.hrms.core.utilities.results.DataResult;
 import com.hrms.hrms.core.utilities.results.Result;
-import com.hrms.hrms.entities.concretes.Employee;
+import com.hrms.hrms.entities.concretes.users.Employee;
 
 @RestController
 @RequestMapping("/api/employees")
